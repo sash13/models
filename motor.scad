@@ -1,7 +1,7 @@
 motor_r = 7;
 motor_h = 20;
 wall = 2;
-diff = 0.1;
+diff = 0.05;
 plank = 3;
 hight=wall*3+plank;
 plank_with = 8-diff;
@@ -22,12 +22,12 @@ union() {
 		union() {
 		translate ([0,0,-hight+diff*2+up]) {
 		cylinder(h=hight-diff, r=motor_r+wall);
-		translate ([-(motor_r+wall),0,-hight-diff/2+up]) 
-			cube([(motor_r+wall)*2,20,plank*2+0.5]);
+		translate ([-(motor_r+wall),0,-hight+up]) 
+			cube([(motor_r+wall)*2,20,plank*2+0.8]);
 		}
 }
 
-		translate ([-plank_with/2,-15,-6.1+up]) cube([8,40,plank]);
+		translate ([-plank_with/2,-15,-6.1+up-0.75]) cube([8,40,plank]);
 		translate ([-4,-2,-2+up]) cube([8,30,wall*2]);
 	}
 }
