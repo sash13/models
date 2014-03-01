@@ -11,15 +11,15 @@ union() {
 
 	difference() {
 		translate ([0,0,up]) 
-		cylinder(h=motor_h-2, r=motor_r+wall);
+		cylinder(h=motor_h-2, r=motor_r+wall, $fn=100);
 		#translate ([0,0,-0.1+up]) 
-		cylinder(h=motor_h+5, r=motor_r-diff);
+		cylinder(h=motor_h+5, r=motor_r-diff, $fn=100);
 
 	}
 	difference() {
 		translate ([0,0,-hight+diff*2+up])
-		cylinder(h=hight-diff, r=motor_r+wall);
+		cylinder(h=hight-diff, r=motor_r+wall, $fn=100);
 		#translate ([-plank_with/2,-15,-6.1+up]) cube([8,30,plank]);
-		#translate ([-4,-2,-2+up]) cube([8,30,wall*2]);
+		#translate ([-4,-2,-2+up]) cube([8,30,wall*2], $fn=100);
 	}
 }
