@@ -1,7 +1,7 @@
-motor_r = 7;
+motor_r = 7/2;
 motor_h = 20;
 wall = 2;
-diff = 0.05;
+diff = 0.0;
 plank = 3;
 hight=wall*3+plank;
 plank_with = 8-diff;
